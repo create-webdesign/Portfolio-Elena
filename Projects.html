@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <style>
+    .slick-slide img {
+      width: 100%;
+      height: auto;
+    }
+    .text-turquoise {
+  color: #00bcd4;
+}
+
+.hover\:text-turquoise:hover {
+  color: #00bcd4;
+}
+
+header {
+  padding: 1.5rem 3rem;       /* spațiu interior mai generos */
+  height: 70px;               /* înălțime crescută */
+}
+
+nav ul li a {
+  font-size: 1.10rem;        /* text mai mare pentru linkuri */
+  font-weight: 500;
+}
+
+nav ul {
+  gap: 0,1rem;                  /* distanță mai mare între linkuri */
+}
+
+.carousel {
+  max-width: 400px; /* ajustează după cum dorești */
+  margin: 0 auto; /* centrează caruselul pe orizontală */
+}
+
+.carousel div img {
+  width: 100%;
+  height: 400px;        /* sau 300px dacă vrei și mai mic */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  /* Stil pentru meniul deschis (ul când are clasa block) */
+  nav ul {
+    background-color: #000000; /* fundal negru solid */
+    border-radius: 8px;
+    padding: 3rem 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    width: 200px; /* mai lat */
+    right: 1rem; /* distanță mai mică de marginea dreaptă */
+    top: 3.5rem; /* distanța față de buton */
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+  }
+
+nav ul.block {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px; /* spațiu între elemente, opțional */
+  }
+  
+  .carousel {
+    max-width: 95%;
+  }
+
+  .slick-slide img {
+    height: 250px;     /* mai mic pentru mobil */
+    width: 250px;
+  }
+
+  nav ul.block {
+    display: flex !important;
+    flex-direction: column;      /* elementele pe verticală */
+    align-items: center;         /* centrează orizontal */
+    gap: 20px;                   /* spațiu între elemente */
+    padding: 10px 0;             /* padding sus-jos opțional */
+  }
+
+  nav ul.block li {
+    width: 100%;                 /* ocupă lățimea disponibilă */
+    display: flex;
+    justify-content: center;     /* centrează conținutul în li */
+    align-items: center;         /* aliniere verticală */
+  }
+
+  nav ul.block li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;                   /* spațiu între text și icon */
+    width: 100%;
+  }
+
+  nav ul.block li img {
+    width: 24px;
+    height: 24px;
+  }
+}
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center p-4 bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="Imagini/logoHC.png" alt="Logo" class="h-8 w-8">
+      <span class="text-lg font-bold"></span>
+    </div>
+    <nav x-data="{ open: false }" @click.away="open = false" class="relative">
+      <button @click="open = !open" class="md:hidden focus:outline-none">☰</button>
+      <ul
+        :class="{'block': open, 'hidden': !open}"
+        class="absolute right-0 mt-2 bg-gray-800 rounded-md p-2 md:flex md:static md:p-0 md:bg-transparent md:space-x-6 hidden"
+      >
+        <li><a href="index.html" class="hover:text-turquoise">Home</a></li>
+        <li><a href="About me.html" class="hover:text-turquoise">About</a></li>
+        <li><a href="Projects.html" class="text-turquoise">Projects</a></li>
+        <li><a href="Contact.html" class="hover:text-turquoise">Contact</a></li>
+        <li>
+          <a href="#">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" style="vertical-align: middle;" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Projects Section with Grid -->
+  <section id="projects" class="px-4 py-16 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">My Web Projects</h2>
+    <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+      <a href="https://create-webdesign.github.io/ProX-Clean/index.html" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="Imagini/Screenshot 2025-07-20 100543.png" alt="Proiect 1" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">ProX Clean</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="Imagini/Screenshot 2025-07-20 101416.png" alt="Proiect 2" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Personal Portfolio</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?portfolio,website" alt="Proiect 3" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Business Site</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?app,ui" alt="Proiect 4" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Mobile App UI</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?dashboard,admin" alt="Proiect 5" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Admin Dashboard</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?blog,web" alt="Proiect 6" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Blog Platform</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?design,agency" alt="Proiect 7" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Design Agency</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?landing,page" alt="Proiect 8" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">Landing Page</div>
+      </a>
+      <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?ecommerce,shop" alt="Proiect 9" class="group-hover:scale-105 transform transition duration-300">
+        <div class="p-2 text-center text-white bg-gray-800">E-commerce Shop</div>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section id="gallery" class="px-4 py-16 bg-gray-800">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Creative Work & Inspirations</h2>
+      <p class="text-gray-300 mb-4">My creativity goes beyond web design. I enjoy painting, photography, and experimenting with colors, textures, and shapes. These passions inspire my design process.</p>
+      <div class="carousel">
+        <div><img src="Imagini/IMG_4576 (1).png" alt="Gallery Image 1"></div>
+        <div><img src="Imagini/IMG_5389.png" alt="Gallery Image 2"></div>
+        <div><img src="Imagini/IMG_5797-fav.png" alt="Gallery Image 3"></div>
+        <div><img src="Imagini/IMG_5943.png" alt="Gallery Image 3"></div>
+        <div><img src="Imagini/IMG-5689 fav.png" alt="Gallery Image 3"></div>
+        <div><img src="Imagini/IMG_5945paint.png" alt="Gallery Image 3"></div>
+        <div><img src="Imagini/IMG_5720 fav.png" alt="Gallery Image 3"></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2500
+      });
+    });
+  </script>
+</body>
+</html>
