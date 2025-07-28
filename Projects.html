@@ -51,6 +51,16 @@ nav ul {
   
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
 .carousel {
   max-width: 400px; /* ajustează după cum dorești */
   margin: 0 auto; /* centrează caruselul pe orizontală */
@@ -119,6 +129,11 @@ nav ul.block {
     width: 24px;
     height: 24px;
   }
+  .menu-toggle {
+    display: block;
+    padding: 8px 12px;
+    font-size: 24px;
+  }
 }
   </style>
 </head>
@@ -130,7 +145,7 @@ nav ul.block {
       <span class="text-lg font-bold"></span>
     </div>
     <nav x-data="{ open: false }" @click.away="open = false" class="relative">
-      <button @click="open = !open" class="md:hidden focus:outline-none">☰</button>
+      <button @click="open = !open" class="menu-toggle">☰</button>
       <ul
         :class="{'block': open, 'hidden': !open}"
         class="absolute right-0 mt-2 bg-gray-800 rounded-md p-2 md:flex md:static md:p-0 md:bg-transparent md:space-x-6 hidden"
@@ -167,7 +182,7 @@ nav ul.block {
         <div class="p-2 text-center text-white bg-gray-800">Business Site</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?app,ui" alt="Proiect 4" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?app,ui" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Mobile App UI</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
