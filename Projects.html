@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Proiecte – Elena | Web Designer Freelancer</title>
+  <meta name="description" content="Vezi proiectele mele de web design: site-uri moderne, curate, responsive. Portofoliu cu exemple reale de design web pentru clienți." />
+  <meta name="author" content="Elena, Web Designer Freelancer" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Proiecte – Elena | Web Designer Freelancer" />
+  <meta property="og:description" content="Portofoliu de site-uri moderne și curate, create cu HTML, CSS, JavaScript și Figma. Inspiră-te!" />
+  <meta property="og:image" content="https://create-webdesign.github.io/Portfolio-Elena/imagini/preview-proiect.png" />
+  <meta property="og:url" content="https://create-webdesign.github.io/Portfolio-Elena/Projects.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="imagini/favicon.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -33,6 +43,12 @@ nav ul li a {
 
 nav ul {
   gap: 0,1rem;                  /* distanță mai mare între linkuri */
+}
+
+.logo {
+  height: 37px;
+  flex-shrink: 0;
+  
 }
 
 .carousel {
@@ -110,7 +126,7 @@ nav ul.block {
   <!-- Navbar -->
   <header class="flex justify-between items-center p-4 bg-gray-800 shadow-md sticky top-0 z-50">
     <div class="flex items-center space-x-3">
-      <img src="imagini/logo.png" alt="Logo" class="h-8 w-8">
+      <img src="imagini/logo.png" alt="Elena Web Designer – Logo personal" class="logo">
       <span class="text-lg font-bold"></span>
     </div>
     <nav x-data="{ open: false }" @click.away="open = false" class="relative">
@@ -125,7 +141,7 @@ nav ul.block {
         <li><a href="Contact.html" class="hover:text-turquoise">Contact</a></li>
         <li>
           <a href="#">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" style="vertical-align: middle;" />
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram Elena Web Designer Freelancer" style="vertical-align: middle;" />
           </a>
         </li>
       </ul>
@@ -139,15 +155,15 @@ nav ul.block {
     <h2 class="text-3xl font-bold mb-6">My Web Projects</h2>
     <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
       <a href="https://create-webdesign.github.io/ProX-Clean/index.html" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="imagini/Screenshot_2025-07-20_100543.png.png" alt="Proiect 1" class="group-hover:scale-105 transform transition duration-300">
+        <img src="imagini/Screenshot_2025-07-20_100543.png.png" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">ProX Clean</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="imagini/Screenshot 2025-07-20 101416.png" alt="Proiect 2" class="group-hover:scale-105 transform transition duration-300">
+        <img src="imagini/Screenshot 2025-07-20 101416.png" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Personal Portfolio</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?portfolio,website" alt="Proiect 3" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?portfolio,website" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Business Site</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
@@ -155,23 +171,23 @@ nav ul.block {
         <div class="p-2 text-center text-white bg-gray-800">Mobile App UI</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?dashboard,admin" alt="Proiect 5" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?dashboard,admin" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Admin Dashboard</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?blog,web" alt="Proiect 6" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?blog,web" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Blog Platform</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?design,agency" alt="Proiect 7" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?design,agency" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Design Agency</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?landing,page" alt="Proiect 8" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?landing,page" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">Landing Page</div>
       </a>
       <a href="#" target="_blank" class="group block overflow-hidden rounded-xl border border-gray-700 shadow-lg hover:shadow-2xl transition">
-        <img src="https://source.unsplash.com/600x400/?ecommerce,shop" alt="Proiect 9" class="group-hover:scale-105 transform transition duration-300">
+        <img src="https://source.unsplash.com/600x400/?ecommerce,shop" alt="Elena, web designer freelancer" class="group-hover:scale-105 transform transition duration-300">
         <div class="p-2 text-center text-white bg-gray-800">E-commerce Shop</div>
       </a>
     </div>
@@ -183,13 +199,13 @@ nav ul.block {
       <h2 class="text-3xl font-bold mb-6">Creative Work & Inspirations</h2>
       <p class="text-gray-300 mb-4">My creativity goes beyond web design. I enjoy painting, photography, and experimenting with colors, textures, and shapes. These passions inspire my design process.</p>
       <div class="carousel">
-        <div><img src="imagini/IMG_4576 (1)-min.png" alt="Gallery Image 1"></div>
-        <div><img src="imagini/IMG_5389-min.png" alt="Gallery Image 2"></div>
-        <div><img src="imagini/IMG_5797-fav-min.png" alt="Gallery Image 3"></div>
-        <div><img src="imagini/IMG_5943-min.png" alt="Gallery Image 3"></div>
-        <div><img src="imagini/IMG-5689 fav-min.png" alt="Gallery Image 3"></div>
-        <div><img src="imagini/IMG_5945paint-min.png" alt="Gallery Image 3"></div>
-        <div><img src="imagini/IMG_5720 fav-min.png" alt="Gallery Image 3"></div>
+        <div><img src="imagini/IMG_4576 (1)-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG_5389-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG_5797-fav-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG_5943-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG-5689 fav-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG_5945paint-min.png" alt="Elena, web designer freelancer"></div>
+        <div><img src="imagini/IMG_5720 fav-min.png" alt="Elena, web designer freelancer"></div>
         
       </div>
     </div>
